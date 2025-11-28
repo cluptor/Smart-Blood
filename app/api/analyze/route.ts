@@ -18,6 +18,9 @@ interface AnalysisResponse {
     results: BiomarkerResult[];
 }
 
+// Allow for longer processing times (Vercel specific)
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
     console.log('--- Analyze Request Started ---');
 
@@ -209,9 +212,4 @@ IMPORTANT: Return ONLY the JSON, no additional text or markdown formatting.`;
     }
 }
 
-// Configure the route to handle larger files
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-};
+
