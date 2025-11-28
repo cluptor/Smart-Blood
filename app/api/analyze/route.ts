@@ -128,7 +128,8 @@ IMPORTANT: Return ONLY the JSON, no additional text or markdown formatting.`;
                 try {
                     // Dynamic import to avoid issues if not needed
                     const pdf = await import('pdf-parse');
-                    const pdfParse = pdf.default;
+                    // @ts-ignore - Handle CJS/ESM interop
+                    const pdfParse = pdf.default || pdf;
                     const pdfData = await pdfParse(buffer);
 
                     console.log('Text extracted length:', pdfData.text.length);
