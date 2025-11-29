@@ -16,6 +16,8 @@ import {
   Zap,
   ShieldCheck
 } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 // --- MOCK AI RESPONSE ---
 const MOCK_AI_RESPONSE = {
@@ -144,8 +146,8 @@ export default function SmartReportTool() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight text-slate-800">
-            Decode Your <br />
-            <span className="text-indigo-600">Blood Work</span>
+            Read <br />
+            <span className="text-indigo-600">Your Blood Test</span>
           </h1>
 
           <p className="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
